@@ -1,16 +1,16 @@
-//Array of possible computer choices
-var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+//Array of possible characters
+var char = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
 //Variables for tracking players wins, losses, & guesses left
 var wins = 0;
 var losses = 0;
 var guessesLeft = 9;
 var lettersGuessed = [];
-var compGuess = computerChoices[Math.floor(Math.random()* computerChoices.length)];
+var randomChar = char[Math.floor(Math.random()* char.length)];
 
 //Reset Function
 function reset() {
-	compGuess = computerChoices[Math.floor(Math.random()* computerChoices.length)];
+	randomChar = char[Math.floor(Math.random()* char.length)];
 	guessesLeft = 9;
 	lettersGuessed.length=0;
 }
@@ -20,14 +20,14 @@ document.onkeyup = function(event) {
     var playerGuess = event.key;
 
 //Checks to see if the player guess is a letter, and is not a letter previously guessed
-if (computerChoices.indexOf(playerGuess) >= 0 && lettersGuessed.indexOf(playerGuess) < 0) 
+if (char.indexOf(playerGuess) >= 0 && lettersGuessed.indexOf(playerGuess) < 0) 
 {
-    if ((playerGuess === compGuess) && (guessesLeft >= 1)) {
+    if ((playerGuess === randomChar) && (guessesLeft >= 1)) {
         wins++;
         alert("You win!");
 	    reset();
     }
-    else if ((playerGuess !== compGuess) && (guessesLeft >= 1)) {
+    else if ((playerGuess !== randomChar) && (guessesLeft >= 1)) {
         guessesLeft--;
         if (guessesLeft > 0){
             lettersGuessed.push(playerGuess);
@@ -44,7 +44,9 @@ if (computerChoices.indexOf(playerGuess) >= 0 && lettersGuessed.indexOf(playerGu
 	    reset();
     }
 }
-console.log(compGuess);
+//Shows answer in console.log
+console.log(randomChar);
+//Making the html adaptable to results
 var html = 
            "<h1>The Psychic Game</h1>" +
            "<p>Guess what letter I'm thinking of!</p>" +
