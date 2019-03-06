@@ -1,0 +1,19 @@
+html { 
+    background: url(assets/images/abra-pokemon-character-vectors.pro.svg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: plum;
+  }
+h1{
+    font-family: 'Acme', sans-serif;
+    text-align: center;
+    size: 30px;
+    text-emphasis: bold;
+}
+
+p{
+    font-family: 'Shadows Into Light', cursive;
+    text-align: center;
+}
