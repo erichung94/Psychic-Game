@@ -1,5 +1,5 @@
 html { 
-    background: url(assets/images/abra-pokemon-character-vectors.pro.svg) no-repeat center center fixed; 
+    background: url(https://vignette.wikia.nocookie.net/legendsofthemultiuniverse/images/4/43/63-Abra.png/revision/latest?cb=20190209191555) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -9,11 +9,18 @@ html {
 h1{
     font-family: 'Acme', sans-serif;
     text-align: center;
-    size: 30px;
+    font-size: 50px;
     text-emphasis: bold;
 }
 
 p{
     font-family: 'Shadows Into Light', cursive;
     text-align: center;
+    font-size: 30px;
+    background-color: white;
+    opacity: 0.5;
+    margin-left: 500px;
+    margin-right: 500px;
+    padding: 10px;
 }
+

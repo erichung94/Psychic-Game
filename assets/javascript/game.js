@@ -49,6 +49,10 @@ console.log(randomChar);
 //Making the html adaptable to results
 var html = 
            "<h1>The Psychic Game</h1>" +
+           "<br>" +
+           "<br>" +
+           "<br>" +
+           "<br>" +
            "<p>Guess what letter I'm thinking of!</p>" +
            "<p>Wins: " + wins + "</p>" +
            "<p>Losses: " + losses + "</p>" +
